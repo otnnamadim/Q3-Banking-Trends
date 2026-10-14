@@ -5,8 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Q3 2026 Bank Earnings Financial Summary </title>
 
-<!-- Social sharing / link unfurl. og:image must be an absolute URL;
-     add preview.png (1200x630) to the repo for the image card to appear. -->
+<!-- Meta properties for when the link to the page is shared. -->
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Aperture Insights by O. T. Nnamadim">
 <meta property="og:title" content="Analysis of Key Financial Statement Line Items for G-SIB Banks as of September 30, 2026">
@@ -18,9 +17,9 @@
 <meta name="twitter:image" content="https://otnnamadim.github.io/Q226BankingTrends/preview.png">
 <meta name="description" content="Interactive trend analysis of JPMorgan, Bank of America, Citigroup, Wells Fargo, Goldman Sachs, Morgan Stanley, BNY Mellon, and State Street using SEC EDGAR XBRL data and preliminary Q3 2026 earnings figures supplied for this dashboard.">
 
-<!-- Chart.js from CDN — do not replace with a local path. Browser "Save Page As"
-     rewrites this to a local _files folder; if that happens, restore this line. -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+
+
 <style>
   :root {
     --paper:     #090d1a;   /* page background — navy-black */
@@ -173,14 +172,17 @@ a.source-link::after {
   .chart-error { padding: 24px; color: #e8998a; font: 14px/1.5 Arial, sans-serif; }
 </style>
 </head>
+
+
+
 <body>
 <main>
   <p class="eyebrow">SEC EDGAR · XBRL Company Facts · Q3 2026 Earnings Season</p>
-  <h1>Analysis of Key Financial Statement Line Items for G-SIB Banks as of September 30, 2026</h1>
+  <h1>Q3 Trends in Key Financial Statement Line Items for G-SIB Banks as of September 30, 2026</h1>
   <p class="byline"><a href="https://www.otnnamadim.com">Aperture Insights</a> · Updated October 14, 2026</p>
-  <p class="intro">Banks are financial services companies. I prepared a summary of each bank's financial results in Q2 2026 and documented the results at the page linked here. For Q3, I've updated the Q2 results to reflect each company's quarterly filing. Some of you may be invested in these company's stock and some may have accounts that are held or managed by these companies. Whether a part of the former or the latter, the results are important to know for a basic understanding of the health of these banks. This page plots historical trends in the following key financial statement line items: total revenue, net income, and consumer credit quality for each bank, with detailed disaggregated trends within each category and additional commentary on what the most recent figures show.</p>
+  <p class="intro">Banks are financial services companies. This page extends the summary of each of the 8 G-SIB bank's financial results from Q2 2026 to Q3 2026. Some of you may be invested in these company's stock and some may have accounts that are held or managed by these companies. Whether a part of the former or the latter, the results are important to know for a basic understanding of the health of these banks. This page plots historical trends in the following key financial statement line items: total revenue, net income, and consumer credit quality for each bank, with detailed disaggregated trends within each category and additional commentary on what the most recent figures show. <a class="source-link" href="https://otnnamadim.github.io/Q226BankingTrends">Q2 Summary Linked Here</a>
   <p class="intro" style="margin-top:14px">
-    Each data point within the series below is pulled programmatically from each bank's SEC filings via the <a class="source-link" href="https://www.sec.gov/search-filings/edgar-application-programming-interfaces">EDGAR Company Facts API</a>. The logic for this program is documented in the <a href="https://github.com/otnnamadim/EDGAR_Pipeline_Project_Streamlit/blob/4f8449607f1be30ffe10c4ee624dbfebf5291d9c/EDGAR_Pipeline.py">EDGAR Pipeline Program</a> and updated for the company CIK codes documented in the <a href="https://github.com/otnnamadim/Q226BankingTrends/blob/557f3ef065928428f2fb0f25240fd328e99aedff/README.md">Readme</a>. These measures agree to the XBRL tags for each bank's financial statements and tie to each of the quarterly SEC filings submitted via EDGAR. Given the lag between when quarterly earnings releases are published and the filed submission to SEC, the preliminary figures from the earnings-release 8-K are shown as ★ . 
+    Each data point within the series below was pulled programmatically from each bank's SEC filings via the Python script referenced in Q2 based on the Company Facts API. The logic for this program is documented in the <a href="https://github.com/otnnamadim/EDGAR_Pipeline_Project_Streamlit/blob/4f8449607f1be30ffe10c4ee624dbfebf5291d9c/EDGAR_Pipeline.py">EDGAR Pipeline Program</a> and updated for the company CIK codes documented in the <a href="https://github.com/otnnamadim/Q226BankingTrends/blob/557f3ef065928428f2fb0f25240fd328e99aedff/README.md">Readme</a>. These measures agree to the XBRL tags for each bank's financial statements and tie to each of the quarterly SEC filings submitted via EDGAR. Given the lag between when quarterly earnings releases are published and the filed submission to SEC, the preliminary figures from the earnings-release 8-K are shown as ★ . 
   </p>
   <p class="prelim-banner">★ Preliminary Q3 2026 figures reflect the values supplied for this dashboard and should be reconciled to each bank’s filed 10-Q and SEC Company Facts data. Q2 2026 total-revenue points have been updated as filed and are shown without the preliminary marker; other Q2 metrics retain their prior status. Q3 metrics not provided in the supplied results remain blank rather than being treated as zero.</p>
 
@@ -194,7 +196,7 @@ a.source-link::after {
 
     <section>
       <h2>Total Revenue</h2>
-      <p class="narrative">Total revenue represents the bank's reported operating revenue which is bifurcated into net interest income and noninterest revenue. As you'll see from the trends below, J.P. Morgan consistently generates the largest amount of revenue while State Street and Bank of New York Mellon are consistently the two smallest. This is primarily due to the nature of each bank's operations: J.P. Morgan is a full-service bank whose operations are tied to the founding of the U.S. economy, whereas State Street and Bank of New York Mellon are primarily custodial banks that serve as intermediaries for more complex financial transactions.</p>
+      <p class="narrative">Total revenue represents the bank's reported operating revenue which is bifurcated into net interest income and noninterest revenue. As you'll see from the trends below, J.P. Morgan consistently generates the largest amount of revenue while State Street and Bank of New York Mellon are consistently the two smallest. This is primarily due to the nature of each bank's operations: J.P. Morgan is a full-service bank whose operations are tied to the founding of the U.S. economy, whereas State Street and Bank of New York Mellon are primarily custodial banks that serve as intermediaries for more complex and niche financial transactions.</p>
       <div class="chart-grid cols-2">
       <figure class="chart-block">
         <figcaption>
@@ -217,7 +219,7 @@ a.source-link::after {
         </figcaption>
         <div class="canvas-wrap"><canvas data-metric="Trading Revenue"></canvas></div>
       </figure></div>
-      <div class="commentary"><h4>Commentary</h4><p>The supplied preliminary Q3 2026 revenue figures are $50.91 billion for JPMorgan, $30.00 billion for Bank of America, $22.09 billion for Citigroup, $21.87 billion for Wells Fargo, $18.68 billion for Goldman Sachs, $20.30 billion for Morgan Stanley, and $4.00 billion for State Street. These seven reported figures sum to $167.85 billion; BNY Mellon is excluded because no revenue figure was supplied. This total demonstrates the scale of the group, but it should not be described as a percentage of total banking-sector income without a consistent same-quarter industry-wide denominator. The supplied figures are preliminary for dashboard purposes and should be reconciled to each bank’s filed quarterly report.</p></div>
+      <div class="commentary"><h4>Commentary</h4><p>The Q3 2026 earnings releases indicate total revenue of $50.2 billion for JPMorgan, $30.00 billion for Bank of America, $22.09 billion for Citigroup, $21.87 billion for Wells Fargo, $18.68 billion for Goldman Sachs, $20.30 billion for Morgan Stanley, and $4.00 billion for State Street. These seven reported figures sum to $167.85 billion; BNY Mellon has yet to report. This total demonstrates the scale of the group, but it should not be described as a percentage of total banking-sector income without a consistent same-quarter industry-wide denominator. The supplied figures are preliminary for dashboard purposes and should be reconciled to each bank’s filed quarterly report.</p></div>
     </section>
     <section>
       <h2>Net Income</h2>
@@ -237,7 +239,7 @@ a.source-link::after {
         </figcaption>
         <div class="canvas-wrap"><canvas data-metric="EPS (Diluted)"></canvas></div>
       </figure></div>
-      <div class="commentary"><h4>Commentary</h4><p>The supplied preliminary Q3 net income figures are $15.31 billion at JPMorgan, $3.50 billion at Bank of America, $3.75 billion at Citigroup, $5.95 billion at Wells Fargo, $5.29 billion at Goldman Sachs, $4.91 billion at Morgan Stanley, and $1.10 billion at State Street. Supplied diluted EPS is $5.57 at JPMorgan, $0.91 at Bank of America, $1.85 at Citigroup, $1.87 at Wells Fargo, $17.01 at Goldman Sachs, $3.03 at Morgan Stanley, and $3.69 at State Street. EPS is not directly comparable across banks without considering share counts, capital actions, and differences in business mix.</p><p><strong>Note.</strong> Diluted EPS reflects share repurchase programs as well as organic earnings growth. When a bank retires its own stock the denominator shrinks, so EPS can rise even in a quarter when net income does not — which is why the two charts above do not always move together.</p></div>
+      <div class="commentary"><h4>Commentary</h4><p>The Q3 net income figures are $15.31 billion at JPMorgan, $3.50 billion at Bank of America, $3.75 billion at Citigroup, $5.95 billion at Wells Fargo, $5.29 billion at Goldman Sachs, $4.91 billion at Morgan Stanley, and $1.10 billion at State Street. Supplied diluted EPS is $5.57 at JPMorgan, $0.91 at Bank of America, $1.85 at Citigroup, $1.87 at Wells Fargo, $17.01 at Goldman Sachs, $3.03 at Morgan Stanley, and $3.69 at State Street. EPS is not directly comparable across banks without considering each bank's total share counts, capital actions, and differences in business mix.</p><p><strong>Note.</strong> Diluted EPS reflects share repurchase programs as well as organic earnings growth. When a bank retires its own stock the denominator shrinks, so EPS can rise even in a quarter when net income does not — which is why the two charts above do not always move together.</p></div>
     </section>
     <section>
       <h2>Consumer Credit Quality</h2>
@@ -255,7 +257,7 @@ a.source-link::after {
 
   <section>
     <h2>Why these banks are systemically important</h2>
-    <p class="narrative">The eight institutions tracked here—JPMorgan Chase, Bank of America, Citigroup, Wells Fargo, Goldman Sachs, Morgan Stanley, BNY Mellon, and State Street—are the U.S. banking groups identified as global systemically important banks (G-SIBs). Their importance is not determined by revenue alone. It reflects a combination of scale, interconnectedness with other financial institutions, cross-border activity, complexity, and the difficulty of replacing the critical services they provide.</p>
+    <p class="narrative">The eight banks: JPMorgan Chase, Bank of America, Citigroup, Wells Fargo, Goldman Sachs, Morgan Stanley, BNY Mellon, and State Street are deemed as global systemically important banks (G-SIBs) because a mix of their scale, interconnectedness with other financial institutions, cross-border activity, complexity, and the difficulty of replacing their unique service offerings. </p>
     <div class="commentary">
       <h4>Channels of systemic importance</h4>
       <p><strong>Payments, clearing, and custody.</strong> These banks support high-volume payments, securities settlement, custody, and asset servicing. Disruption at a major provider can affect many institutions and clients at once.</p>
@@ -266,8 +268,8 @@ a.source-link::after {
 
   <section>
     <h2>Cross-bank snapshot</h2>
-    <p class="narrative">Q3 2026 snapshot using the figures supplied for this update.
-    USD billions except EPS ($/share). ★ = preliminary figure; BNY Mellon values were not supplied.</p>
+    <p class="narrative">Q3 2026 snapshot using the earnings report figures.
+    USD billions except EPS ($/share). ★ = preliminary figures.</p>
     <div class="table-scroll">
     <table>
       <thead><tr><th style="text-align:left">Bank</th><th>Revenue</th><th>Net Interest Income</th><th>Net Income</th><th>EPS (Diluted)</th><th>Provision for Credit Losses</th></tr></thead>
@@ -302,7 +304,7 @@ a.source-link::after {
 const DATA = {"annual":{"Total Revenue":{"JPM":[{"x":"2013-12-31","y":97.367,"prelim":false},{"x":"2014-12-31","y":95.112,"prelim":false},{"x":"2015-12-31","y":93.543,"prelim":false},{"x":"2016-12-31","y":96.569,"prelim":false},{"x":"2017-12-31","y":100.705,"prelim":false},{"x":"2018-12-31","y":108.783,"prelim":false},{"x":"2019-12-31","y":115.72,"prelim":false},{"x":"2020-12-31","y":119.951,"prelim":false},{"x":"2021-12-31","y":121.649,"prelim":false},{"x":"2022-12-31","y":128.695,"prelim":false},{"x":"2023-12-31","y":158.104,"prelim":false},{"x":"2024-12-31","y":177.556,"prelim":false},{"x":"2025-12-31","y":182.447,"prelim":false}],"BAC":[{"x":"2007-12-31","y":66.833,"prelim":false},{"x":"2008-12-31","y":72.782,"prelim":false},{"x":"2009-12-31","y":119.643,"prelim":false},{"x":"2010-12-31","y":110.22,"prelim":false},{"x":"2011-12-31","y":93.454,"prelim":false},{"x":"2012-12-31","y":83.334,"prelim":false},{"x":"2013-12-31","y":88.942,"prelim":false},{"x":"2014-12-31","y":85.894,"prelim":false},{"x":"2015-12-31","y":82.965,"prelim":false},{"x":"2016-12-31","y":83.701,"prelim":false},{"x":"2017-12-31","y":87.126,"prelim":false},{"x":"2018-12-31","y":91.02,"prelim":false},{"x":"2019-12-31","y":91.244,"prelim":false},{"x":"2020-12-31","y":85.528,"prelim":false},{"x":"2021-12-31","y":89.113,"prelim":false},{"x":"2022-12-31","y":94.95,"prelim":false},{"x":"2023-12-31","y":102.769,"prelim":false},{"x":"2024-12-31","y":105.856,"prelim":false},{"x":"2025-12-31","y":113.097,"prelim":false}],"C":[{"x":"2007-12-31","y":77.3,"prelim":false},{"x":"2008-12-31","y":51.599,"prelim":false},{"x":"2009-12-31","y":80.285,"prelim":false},{"x":"2010-12-31","y":86.601,"prelim":false},{"x":"2011-12-31","y":78.353,"prelim":false},{"x":"2012-12-31","y":70.173,"prelim":false},{"x":"2013-12-31","y":76.366,"prelim":false},{"x":"2014-12-31","y":77.219,"prelim":false},{"x":"2015-12-31","y":76.354,"prelim":false},{"x":"2016-12-31","y":70.797,"prelim":false},{"x":"2017-12-31","y":72.444,"prelim":false},{"x":"2018-12-31","y":72.854,"prelim":false},{"x":"2019-12-31","y":75.067,"prelim":false},{"x":"2020-12-31","y":75.501,"prelim":false},{"x":"2021-12-31","y":71.884,"prelim":false},{"x":"2022-12-31","y":75.338,"prelim":false},{"x":"2023-12-31","y":78.066,"prelim":false},{"x":"2024-12-31","y":80.722,"prelim":false},{"x":"2025-12-31","y":85.225,"prelim":false}],"WFC":[{"x":"2018-12-31","y":86.408,"prelim":false},{"x":"2019-12-31","y":86.832,"prelim":false},{"x":"2020-12-31","y":74.264,"prelim":false},{"x":"2021-12-31","y":79.166,"prelim":false},{"x":"2022-12-31","y":74.368,"prelim":false},{"x":"2023-12-31","y":82.597,"prelim":false},{"x":"2024-12-31","y":82.296,"prelim":false},{"x":"2025-12-31","y":83.699,"prelim":false}],"GS":[{"x":"2011-12-31","y":28.811,"prelim":false},{"x":"2012-12-31","y":34.163,"prelim":false},{"x":"2013-12-31","y":34.206,"prelim":false},{"x":"2014-12-31","y":34.528,"prelim":false},{"x":"2015-12-31","y":33.82,"prelim":false},{"x":"2016-12-31","y":30.79,"prelim":false},{"x":"2017-12-31","y":32.73,"prelim":false},{"x":"2018-12-31","y":36.616,"prelim":false},{"x":"2019-12-31","y":36.546,"prelim":false},{"x":"2020-12-31","y":44.56,"prelim":false},{"x":"2021-12-31","y":59.339,"prelim":false},{"x":"2022-12-31","y":47.365,"prelim":false},{"x":"2023-12-31","y":46.254,"prelim":false},{"x":"2024-12-31","y":53.512,"prelim":false},{"x":"2025-12-31","y":58.283,"prelim":false}],"MS":[{"x":"2013-12-31","y":32.493,"prelim":false},{"x":"2014-12-31","y":34.275,"prelim":false},{"x":"2015-12-31","y":35.155,"prelim":false},{"x":"2016-12-31","y":34.631,"prelim":false},{"x":"2017-12-31","y":37.945,"prelim":false},{"x":"2018-12-31","y":40.107,"prelim":false},{"x":"2019-12-31","y":41.538,"prelim":false},{"x":"2020-12-31","y":48.757,"prelim":false},{"x":"2021-12-31","y":59.755,"prelim":false},{"x":"2022-12-31","y":53.668,"prelim":false},{"x":"2023-12-31","y":54.143,"prelim":false},{"x":"2024-12-31","y":61.761,"prelim":false},{"x":"2025-12-31","y":70.645,"prelim":false}],"BK":[{"x":"2008-12-31","y":13.573,"prelim":false},{"x":"2009-12-31","y":7.654,"prelim":false},{"x":"2010-12-31","y":13.816,"prelim":false},{"x":"2011-12-31","y":14.68,"prelim":false},{"x":"2012-12-31","y":14.534,"prelim":false},{"x":"2013-12-31","y":14.968,"prelim":false},{"x":"2014-12-31","y":15.608,"prelim":false},{"x":"2015-12-31","y":15.126,"prelim":false},{"x":"2017-12-31","y":15.543,"prelim":false},{"x":"2018-12-31","y":16.392,"prelim":false},{"x":"2019-12-31","y":16.462,"prelim":false},{"x":"2020-12-31","y":15.808,"prelim":false},{"x":"2021-12-31","y":15.931,"prelim":false},{"x":"2022-12-31","y":16.529,"prelim":false},{"x":"2023-12-31","y":17.697,"prelim":false},{"x":"2024-12-31","y":18.619,"prelim":false},{"x":"2025-12-31","y":20.08,"prelim":false}],"STT":[{"x":"2007-12-31","y":8.336,"prelim":false},{"x":"2008-12-31","y":10.693,"prelim":false},{"x":"2009-12-31","y":8.64,"prelim":false},{"x":"2010-12-31","y":8.953,"prelim":false},{"x":"2011-12-31","y":9.594,"prelim":false},{"x":"2012-12-31","y":9.649,"prelim":false},{"x":"2013-12-31","y":9.864,"prelim":false},{"x":"2014-12-31","y":10.274,"prelim":false},{"x":"2015-12-31","y":10.36,"prelim":false},{"x":"2016-12-31","y":10.207,"prelim":false},{"x":"2017-12-31","y":11.266,"prelim":false},{"x":"2018-12-31","y":12.131,"prelim":false},{"x":"2019-12-31","y":11.756,"prelim":false},{"x":"2020-12-31","y":11.703,"prelim":false},{"x":"2021-12-31","y":12.027,"prelim":false},{"x":"2022-12-31","y":12.148,"prelim":false},{"x":"2023-12-31","y":11.945,"prelim":false},{"x":"2024-12-31","y":13.0,"prelim":false},{"x":"2025-12-31","y":13.944,"prelim":false}]}},
 "quarterly":{
   "Total Revenue":{
-    "JPM":[{"x":"2024-03-31","y":41.934,"prelim":false},{"x":"2024-06-30","y":50.988,"prelim":false},{"x":"2024-09-30","y":42.651,"prelim":false},{"x":"2024-12-31","y":41.983,"prelim":false},{"x":"2025-03-31","y":43.071,"prelim":false},{"x":"2025-06-30","y":50.211,"prelim":false},{"x":"2025-09-30","y":44.509,"prelim":false},{"x":"2025-12-31","y":44.656,"prelim":false},{"x":"2026-03-31","y":44.331,"prelim":false},{"x":"2026-06-30","y":51.025,"prelim":false},{"x":"2026-09-30","y":50.91,"prelim":true}],
+    "JPM":[{"x":"2024-03-31","y":41.934,"prelim":false},{"x":"2024-06-30","y":50.988,"prelim":false},{"x":"2024-09-30","y":42.651,"prelim":false},{"x":"2024-12-31","y":41.983,"prelim":false},{"x":"2025-03-31","y":43.071,"prelim":false},{"x":"2025-06-30","y":50.211,"prelim":false},{"x":"2025-09-30","y":44.509,"prelim":false},{"x":"2025-12-31","y":44.656,"prelim":false},{"x":"2026-03-31","y":44.331,"prelim":false},{"x":"2026-06-30","y":51.025,"prelim":false},{"x":"2026-09-30","y":50.17,"prelim":true}],
     "BAC":[{"x":"2024-03-31","y":25.803,"prelim":false},{"x":"2024-06-30","y":25.37,"prelim":false},{"x":"2024-09-30","y":25.327,"prelim":false},{"x":"2024-12-31","y":29.356,"prelim":false},{"x":"2025-03-31","y":27.359,"prelim":false},{"x":"2025-06-30","y":27.994,"prelim":false},{"x":"2025-09-30","y":28.026,"prelim":false},{"x":"2025-12-31","y":29.718,"prelim":false},{"x":"2026-03-31","y":27.954,"prelim":false},{"x":"2026-06-30","y":28.621,"prelim":false},{"x":"2026-09-30","y":30.00,"prelim":true}],
     "C":[{"x":"2024-03-31","y":21.104,"prelim":false},{"x":"2024-06-30","y":20.139,"prelim":false},{"x":"2024-09-30","y":20.315,"prelim":false},{"x":"2024-12-31","y":19.164,"prelim":false},{"x":"2025-03-31","y":21.139,"prelim":false},{"x":"2025-06-30","y":20.654,"prelim":false},{"x":"2025-09-30","y":21.096,"prelim":false},{"x":"2025-12-31","y":22.336,"prelim":false},{"x":"2026-03-31","y":21.321,"prelim":false},{"x":"2026-06-30","y":21.821,"prelim":false},{"x":"2026-09-30","y":22.09,"prelim":true}],
     "WFC":[{"x":"2024-03-31","y":20.864,"prelim":false},{"x":"2024-06-30","y":20.68,"prelim":false},{"x":"2024-09-30","y":20.366,"prelim":false},{"x":"2024-12-31","y":20.386,"prelim":false},{"x":"2025-03-31","y":20.761,"prelim":false},{"x":"2025-06-30","y":20.896,"prelim":false},{"x":"2025-09-30","y":20.916,"prelim":false},{"x":"2025-12-31","y":21.126,"prelim":false},{"x":"2026-03-31","y":21.215,"prelim":false},{"x":"2026-06-30","y":21.512,"prelim":false},{"x":"2026-09-30","y":21.87,"prelim":true}],
@@ -318,6 +320,7 @@ const DATA = {"annual":{"Total Revenue":{"JPM":[{"x":"2013-12-31","y":97.367,"pr
     "WFC":[{"x":"2026-09-30","y":12.52,"prelim":true}],
     "GS":[{"x":"2026-09-30","y":3.77,"prelim":true}],
     "MS":[{"x":"2026-09-30","y":2.22,"prelim":true}],
+    "BK":[{"x":"2026-09-30","y":0.00,"prelim":true}],
     "STT":[{"x":"2026-09-30","y":0.86,"prelim":true}]
   },
   "Net Income":{
@@ -327,6 +330,7 @@ const DATA = {"annual":{"Total Revenue":{"JPM":[{"x":"2013-12-31","y":97.367,"pr
     "WFC":[{"x":"2026-09-30","y":5.95,"prelim":true}],
     "GS":[{"x":"2026-09-30","y":5.29,"prelim":true}],
     "MS":[{"x":"2026-09-30","y":4.91,"prelim":true}],
+    "BK":[{"x":"2026-09-30","y":0.00,"prelim":true}],
     "STT":[{"x":"2026-09-30","y":1.10,"prelim":true}]
   },
   "EPS (Diluted)":{
@@ -336,6 +340,7 @@ const DATA = {"annual":{"Total Revenue":{"JPM":[{"x":"2013-12-31","y":97.367,"pr
     "WFC":[{"x":"2026-09-30","y":1.87,"prelim":true}],
     "GS":[{"x":"2026-09-30","y":17.01,"prelim":true}],
     "MS":[{"x":"2026-09-30","y":3.03,"prelim":true}],
+    "BK":[{"x":"2026-09-30","y":0.00,"prelim":true}],
     "STT":[{"x":"2026-09-30","y":3.69,"prelim":true}]
   },
   "Provision for Credit Losses":{
@@ -345,6 +350,7 @@ const DATA = {"annual":{"Total Revenue":{"JPM":[{"x":"2013-12-31","y":97.367,"pr
     "WFC":[{"x":"2026-09-30","y":1.00,"prelim":true}],
     "GS":[{"x":"2026-09-30","y":0.40,"prelim":true}],
     "MS":[{"x":"2026-09-30","y":0.15,"prelim":true}],
+    "BK":[{"x":"2026-09-30","y":0.00,"prelim":true}],
     "STT":[{"x":"2026-09-30","y":0.00,"prelim":true}]
   }
 }
