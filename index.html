@@ -401,11 +401,11 @@ const DATA = {
 // ---- Q3 2026 preliminary data (quarter ending 2026-09-30) ----
 const Q3_DATE = "2026-09-30";
 const Q3 = {
-  "Total Revenue":               {JPM:50.91, BAC:30.0, C:22.09, WFC:21.87, GS:18.68, MS:20.3,  BK:null, STT:4.0},
-  "Net Interest Income":         {JPM:24.7,  BAC:16.4, C:14.94, WFC:12.52, GS:3.77,  MS:2.22,  BK:null, STT:0.86},
-  "Net Income":                  {JPM:15.31, BAC:3.5,  C:3.75,  WFC:5.95,  GS:5.29,  MS:4.91,  BK:null, STT:1.1},
-  "EPS (Diluted)":               {JPM:5.57,  BAC:0.91, C:1.85,  WFC:1.87,  GS:17.01, MS:3.03,  BK:null, STT:3.69},
-  "Provision for Credit Losses": {JPM:2.74,  BAC:1.3,  C:2.6,   WFC:1.0,   GS:0.4,   MS:0.15,  BK:null, STT:0.0}
+  "Total Revenue":               {JPM:50.91, BAC:30.0, C:22.09, WFC:21.87, GS:18.68, MS:20.3,  BK:5.676, STT:4.0},
+  "Net Interest Income":         {JPM:24.7,  BAC:16.4, C:14.94, WFC:12.52, GS:3.77,  MS:2.22,  BK:1.423, STT:0.86},
+  "Net Income":                  {JPM:15.31, BAC:3.5,  C:3.75,  WFC:5.95,  GS:5.29,  MS:4.91,  BK:1.608, STT:1.1},
+  "EPS (Diluted)":               {JPM:5.57,  BAC:0.91, C:1.85,  WFC:1.87,  GS:17.01, MS:3.03,  BK:2.34, STT:3.69},
+  "Provision for Credit Losses": {JPM:2.74,  BAC:1.3,  C:2.6,   WFC:1.0,   GS:0.4,   MS:0.15,  BK:0.001, STT:0.0}
 };
 Object.entries(Q3).forEach(([metric, banks]) => {
   Object.entries(banks).forEach(([t, y]) => {
