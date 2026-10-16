@@ -176,7 +176,7 @@ a.source-link::after {
   <p class="eyebrow">SEC EDGAR · XBRL Company Facts · Q3 2026 Earnings Season</p>
   <h1>Analysis of Key Financial Statement Line Items for G-SIB Banks as of September 30, 2026</h1>
   <p class="byline"><a href="https://www.otnnamadim.com">Aperture Insights</a> · Updated October 14, 2026</p>
-  <p class="intro">Banks are financial services companies. I prepared a summary of each bank's financial results in Q2 2026 and documented the results at the page linked here. For Q3, I've updated the Q2 results to reflect each company's quarterly filing. Some of you may be invested in these companies' stock and some may have accounts that are held or managed by these companies. Whether a part of the former or the latter, the results are important to know for a basic understanding of the health of these banks. This page plots historical trends in the following key financial statement line items: total revenue, net income, and consumer credit quality for each bank, with detailed disaggregated trends within each category and additional commentary on what the most recent figures show.</p>
+  <p class="intro">Banks are financial services companies. I prepared a summary of each bank's financial results in Q2 2026 and documented the results at the page <a class="source-link" href="https://github.com/otnnamadim/Q226BankingTrends">linked here.</a>. For Q3, I've updated the Q2 results to reflect each company's quarterly filing. Some of you may be invested in these companies' stock and some may have accounts that are held or managed by these companies. Whether a part of the former or the latter, the results are important to know for a basic understanding of the health of these banks. This page plots historical trends in the following key financial statement line items: total revenue, net income, and consumer credit quality for each bank, with detailed disaggregated trends within each category and additional commentary on what the most recent figures show.</p>
   <p class="intro" style="margin-top:14px">
     Each data point within the series below is pulled programmatically from each bank's SEC filings via the <a class="source-link" href="https://www.sec.gov/search-filings/edgar-application-programming-interfaces">EDGAR Company Facts API</a>. The logic for this program is documented in the <a href="https://github.com/otnnamadim/EDGAR_Pipeline_Project_Streamlit/blob/4f8449607f1be30ffe10c4ee624dbfebf5291d9c/EDGAR_Pipeline.py">EDGAR Pipeline Program</a> and updated for the company CIK codes documented in the <a href="https://github.com/otnnamadim/Q226BankingTrends/blob/557f3ef065928428f2fb0f25240fd328e99aedff/README.md">Readme</a>. These measures agree to the XBRL tags for each bank's financial statements and tie to each of the quarterly SEC filings submitted via EDGAR. Given the lag between when quarterly earnings releases are published and the filed submission to SEC, the preliminary figures from the earnings-release 8-K are shown as ★ .
   </p>
@@ -268,12 +268,7 @@ a.source-link::after {
         <tr><td class="tick" style="--c:#e5c06b"><a href="https://www.wellsfargo.com/">WFC</a></td><td>21.87★</td><td>12.52★</td><td>5.95★</td><td>1.87★</td><td>1.00★</td></tr>
         <tr><td class="tick" style="--c:#86d1a0"><a href="https://www.goldmansachs.com/">GS</a></td><td>18.68★</td><td>3.77★</td><td>5.29★</td><td>17.01★</td><td>0.40★</td></tr>
         <tr><td class="tick" style="--c:#d99bce"><a href="https://www.morganstanley.com/">MS</a></td><td>20.30★</td><td>2.22★</td><td>4.91★</td><td>3.03★</td><td>0.15★</td></tr>
-        <tr><td class="tick" style="--c:#aeb6c4"><a href="https://www.bny.com/">BK</a></td>
-          <td class="na" title="BK — Q3 2026 figures not yet supplied; left blank rather than shown as zero.">—</td>
-          <td class="na" title="BK — Q3 2026 figures not yet supplied; left blank rather than shown as zero.">—</td>
-          <td class="na" title="BK — Q3 2026 figures not yet supplied; left blank rather than shown as zero.">—</td>
-          <td class="na" title="BK — Q3 2026 figures not yet supplied; left blank rather than shown as zero.">—</td>
-          <td class="na" title="BK — Q3 2026 figures not yet supplied; left blank rather than shown as zero.">—</td></tr>
+        <tr><td class="tick" style="--c:#aeb6c4"><a href="https://www.bny.com/">BK</a></td><td>5.676★</td><td>1.423★</td><td>1.608★</td><td>2.34★</td><td>0.001★</td>
         <tr><td class="tick" style="--c:#8aa9d6"><a href="https://www.statestreet.com/">STT</a></td><td>4.00★</td><td>0.86★</td><td>1.10★</td><td>3.69★</td><td>0.00★</td></tr>
       </tbody>
     </table>
@@ -401,9 +396,9 @@ const DATA = {
 // ---- Q3 2026 preliminary data (quarter ending 2026-09-30) ----
 const Q3_DATE = "2026-09-30";
 const Q3 = {
-  "Total Revenue":               {JPM:50.91, BAC:30.0, C:22.09, WFC:21.87, GS:18.68, MS:20.3,  BK:5.676, STT:4.0},
+  "Total Revenue":               {JPM:50.91, BAC:30.0, C:22.09, WFC:21.87, GS:18.68, MS:20.34,  BK:5.676, STT:4.0},
   "Net Interest Income":         {JPM:24.7,  BAC:16.4, C:14.94, WFC:12.52, GS:3.77,  MS:2.22,  BK:1.423, STT:0.86},
-  "Net Income":                  {JPM:15.31, BAC:3.5,  C:3.75,  WFC:5.95,  GS:5.29,  MS:4.91,  BK:1.608, STT:1.1},
+  "Net Income":                  {JPM:15.31, BAC:6.9,  C:3.75,  WFC:5.95,  GS:5.29,  MS:4.91,  BK:1.608, STT:1.1},
   "EPS (Diluted)":               {JPM:5.57,  BAC:0.91, C:1.85,  WFC:1.87,  GS:17.01, MS:3.03,  BK:2.34, STT:3.69},
   "Provision for Credit Losses": {JPM:2.74,  BAC:1.3,  C:2.6,   WFC:1.0,   GS:0.4,   MS:0.15,  BK:0.001, STT:0.0}
 };
